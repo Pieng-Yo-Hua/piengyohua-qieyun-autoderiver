@@ -107,7 +107,16 @@ def ipa_to_py(c, v):
         'ər': 'er'
     }
     if c == '':
-        # TODO 零聲母改寫
+        if v[0] == 'u':
+            if v == 'u' or v == 'uõ̞' or v == 'uʌʔ':
+                return 'w' + convert_dict_v[v]
+            else:
+                return 'w' + convert_dict_v[v][1:]
+        if v[0] == 'i':
+            if v == 'i' or v == 'iəŋ' or v == 'iʌʔ':
+                return 'y' + convert_dict_v[v]
+            else:
+                return 'y' + convert_dict_v[v][1:]
         return convert_dict_v[v]
     if v == '':
         return convert_dict_c[c]
@@ -120,6 +129,9 @@ with open('ipa_to_py.txt', 'w') as f:
         for j in range(3, len(df.columns)):
             if not df.iloc[i, j] == '':
                 tone, chars = df.iloc[i, j].replace('\xa0', ' ').split(' ')
+                # 是否跳過非城內音
+                if chars[0] == '[': 
+                    continue
                 ipa = consonant_reg(df.columns[j]) + vowel_reg(df.iloc[i, 2])
                 py = ipa_to_py(consonant_reg(df.columns[j]), vowel_reg(df.iloc[i, 2]))
                 ipa_dict[ipa] = py
