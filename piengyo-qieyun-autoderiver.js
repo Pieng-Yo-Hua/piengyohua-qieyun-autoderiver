@@ -130,7 +130,9 @@ function 韻母規則(文讀) {
     if (is('灰韻')) return is('幫組') ? 'ae' : 'uae';
     if (is('佳韻 合口')) return 'ua';
     if (is('皆韻 合口')) return 'uae';
-    if (is('佳皆韻')) return is('曉云匣母') && 文讀 ? 'ie' : 'ae';
+    if (is('佳皆韻 見組')) return 'ie';
+    if (is('佳皆韻 曉匣母')) return 文讀 ? 'ie' : 'ae';
+    if (is('佳皆韻')) return 'ae';
     if (is('夬韻 合口')) return is('曉云匣母') ? 'ua' : 'uae';
     if (is('夬韻')) return 'ae';
     if (is('咍韻')) return 'ae';
@@ -335,13 +337,14 @@ if ((['ng']).includes(聲母) && 韻母 === 'yu') {
 }
 if ((['w']).includes(聲母) && 韻母 === 'i') {
     聲母 = 'y';
-}
+} //微韻白讀
 
 if ((['zh', 'ch', 'sh', 'r', 'nr'].includes(聲母) && ['u', 'w'].includes(韻母[0]))) 聲母 = {
     zh: 'z', ch: 'c', sh: 's', r: 'zs', nr: 'nz',
 }[聲母] || 聲母;
+
 if (['i', 'y'].includes(韻母[0]) && !is('歌韻 一等 見組')) 聲母 = {
-    g: 'j', k: 'q', h: 'x',
+    g: 'j', k: 'q', h: 'x', ng: 'n'
     z: 'j', c: 'q', s: 'x',
 }[聲母] || 聲母;
 
