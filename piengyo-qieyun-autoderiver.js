@@ -106,6 +106,7 @@ function 韻母規則(文讀) {
     if (is('江韻 舒聲 知莊組')) return 文讀 ? 'uon' : 'uo';
     if (is('江韻 舒聲 幫組')) return 文讀 ? 'ang' : 'uo';
     if (is('江韻 舒聲 牙喉音')) return 文讀 ? 'iang' : 'yuo';
+    if (is('江韻 舒聲')) return 文讀 ? 'ueng' : 'uo';
 
     // 止攝
     if (is('支脂韻 幫組')) return 'i';
@@ -248,6 +249,7 @@ function 韻母規則(文讀) {
         if (is('庚韻 二等 開口 知莊組')) return 'a';
         if (is('庚韻 二等 開口 牙喉音')) return 'ia';
         if (is('庚韻 二等 合口')) return 'yue';
+        if (is('庚韻 二等')) return 'ia';
         if (is('庚韻 三等 合口')) return 'yu';
         if (is('庚韻 三等 開口 莊組')) return 'e';
         if (is('庚韻 三等')) return 'i';
