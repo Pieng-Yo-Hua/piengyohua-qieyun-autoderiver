@@ -224,9 +224,10 @@ function 韻母規則(文讀) {
     // 梗攝
     if (is('梗攝 舒聲') && 文讀) {
         if (is('庚韻 二等 合口')) return 'ueng';
-        if (is('庚韻 二等')) return 'eng';
+        if (is('庚耕韻 二等')) return 'eng';
         if (is('庚韻 三等 合口')) return 'yueng';
         if (is('庚韻 三等')) return is('幫組 或 牙喉音') ? 'ieng' : 'eng';
+        if (is('清青韻 幫組')) return 'ieng';
         if (is('耕韻')) return is('合口') ? 'ueng' : 'eng';
         if (is('青韻')) return is('合口') ? 'yueng' : 'ieng';
         if (is('清韻')) return is('合口') ? 'yueng' : is('知莊章組') ? 'eng' : 'ieng';
@@ -250,12 +251,12 @@ function 韻母規則(文讀) {
         if (is('庚韻 三等 合口')) return 'yu';
         if (is('庚韻 三等 開口 莊組')) return 'e';
         if (is('庚韻 三等')) return 'i';
-        if (is('耕韻 開口')) return is('幫見組') ? 'ie' : 'eng';
         if (is('耕韻 合口')) return 'ueng';
+        if (is('耕韻')) return is('幫見組') ? 'ie' : 'eng';
         if (is('青清韻 合口')) return 'yu';
         if (is('青韻')) return is('精組') ? 'ei' : 'i';
         if (is('清韻 開口 精組')) return 'ei';
-        if (is('清韻 開口')) return 'i';
+        if (is('清韻')) return 'i';
 
     }
     // 曾攝
