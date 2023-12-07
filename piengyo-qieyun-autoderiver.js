@@ -94,7 +94,7 @@ function 韻母規則(文讀) {
     if (is('東韻 舒聲 三等')) return is('牙喉音') ? 'yueng' : is('明母') ? 'eng' : 'ueng';
     if (is('東韻 入聲 精組')) return 'yuaq';
     if (is('東韻 入聲')) return is('三等 牙喉音') ? 'yuaq' : is('幫組') ? 'aq' : 'uaq';
-    if (is('鍾韻 舒聲')) return is('疑以影母') ? 'yueng' : is('泥孃母') ? 'eng' : 'ueng'; //白讀顎化待処理
+    if (is('鍾韻 舒聲')) return is('牙喉音') ? 'yueng' : is('孃母') ? 'eng' : 'ueng';
     if (is('鍾韻 入聲')) return is('精組 或 牙喉音') ? 'yuaq' : 'uaq';
     if (is('冬韻 舒聲')) return is('泥孃母') ? 'eng' : 'ueng';
     if (is('冬韻 入聲')) return is('幫組') ? 'aq' : is('精組') ? 'yuaq' : 'uaq';
@@ -113,7 +113,9 @@ function 韻母規則(文讀) {
     if (is('支脂韻 幫組')) return 'i';
     if (is('之脂支韻 精知莊章組 開口')) return 'r';
     if (is('之脂支韻 開口')) return is('牙喉音') ? 'i' : 'er';
-    if (is('脂支韻 合口')) return is('莊組') ? 'uae' : 'uei'; //牙喉音重鈕待処理，葵、季等字
+    if (is('脂支韻 合口 見溪羣疑影曉匣云母 重紐A類')) return 'i';
+    if (is('脂支韻 合口 見溪羣疑影曉匣云母 重紐B類')) return 'uei';
+    if (is('脂支韻 合口')) return is('莊組') ? 'uae' : 'uei';
     if (is('微韻 幫組')) return 文讀 ? 'uei' : 'i';
     if (is('微韻 開口')) return 'i';
     if (is('微韻 合口')) return 文讀 ? 'uei' : 'yu';
