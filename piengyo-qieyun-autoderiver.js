@@ -90,7 +90,8 @@ function 聲母規則(文讀) {
 
 function 韻母規則(文讀) {
     // 通攝
-    if (is('東韻 舒聲')) return is('三等 牙喉音') ? 'yueng' : is('幫組 或 泥孃母') ? 'eng' : 'ueng';
+    if (is('東韻 舒聲 一等')) return is('幫組 或 泥孃母') ? 'eng' : 'ueng';
+    if (is('東韻 舒聲 三等')) return is('牙喉音') ? 'yueng' : is('明母') ? 'eng' : 'ueng';
     if (is('東韻 入聲 精組')) return 'yuaq';
     if (is('東韻 入聲')) return is('三等 牙喉音') ? 'yuaq' : is('幫組') ? 'aq' : 'uaq';
     if (is('鍾韻 舒聲')) return is('疑以影母') ? 'yueng' : is('泥孃母') ? 'eng' : 'ueng'; //白讀顎化待処理
