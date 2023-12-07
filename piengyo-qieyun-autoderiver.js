@@ -82,7 +82,7 @@ function 聲母規則(文讀) {
     }
 
     if (is('曉匣母')) return 'h';
-    if (is('影母')) return is('一二等') ? 'ng' : ''; //只見于開口呼
+    if (is('影母')) return is('一二等 開口') ? 'ng' : ''; //只見于開口呼
     if (is('云以母')) return '';
 
     throw new Error('無聲母規則');
