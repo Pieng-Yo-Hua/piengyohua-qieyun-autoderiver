@@ -38,8 +38,13 @@ function 聲母規則(文讀) {
     if (is('澄母 二等')) return is('梗攝') && (!文讀) ? 'zh' : 'z';
     if (is('澄母 三等 平聲') && 文讀) return is('蟹攝') ? 'c' : 'ch';
     else if (is('澄母 三等')) return is('蟹攝') ? 'z' : 'zh';
-    if (is('孃母 二等')) return is('梗攝') && (!文讀) ? 'nr' : 'nz';
-    if (is('孃母 三等')) return 'nr';
+    if (is('孃母 二等')) return 'nz';
+    if (is('孃母 三等')) {
+        if (is('止攝')) return 'nz';
+        else if (is('咸山攝')) return 'nr';
+        else if (is('尤韻')) return 'nr';
+        else return 'n';
+    }
 
     if (is('精母')) return 'z';
     if (is('清母')) return 'c';
@@ -327,7 +332,6 @@ if (!聲母) {
     if (韻母[0] === 'i') 聲母 = 'y'; //拼寫
     if (韻母[0] === 'u') {
         聲母 = 'w'; //拼寫
-        if (['u', 'uaq', 'uon')
     }
     if (['a', 'e', 'o'].includes(韻母[0])) 聲母 = 'ng'; //影併入疑
     if (聲母 && 韻母[1] && 韻母[1] !== 'n') 韻母 = 韻母.slice(1);
