@@ -41,8 +41,8 @@ function 聲母規則(文讀) {
     if (is('孃母 二等')) return 'nz';
     if (is('孃母 三等')) {
         if (is('合口')) return 'n';
-        if (is('止攝') || is('魚韻')) return 'nz';
-        else if (is('咸山攝') || is('尤韻')) return 'nr';
+        if (is('止攝')) return 'nz';
+        else if (is('咸山攝') || is('魚尤韻')) return 'nr';
         else return 'n';
     }
 
