@@ -152,7 +152,7 @@ function 韻母規則(文讀) {
     // 臻攝
     if (is('臻攝 舒聲')) {
         if (is('眞韻 合口')) return is('知莊章組 或 來日母') ? 'ueng' : 'yueng';
-        if (is('眞臻欣韻')) return is('知莊章組 或 日母') ? 'eng' : 'ieng'; //孃母应為ieng TODO
+        if (is('眞臻欣韻')) return is('莊章組 或 日母') ? 'eng' : is('知徹澄母') ? 'aq' : 'ieng';
         if (is('文韻')) return is('幫組') ? 'ueng' : 'yueng';
         if (is('元韻 開口')) return 'ie';
         if (is('元韻')) return is('幫組') ? 'uon' : 'yue';
@@ -162,7 +162,7 @@ function 韻母規則(文讀) {
 
     if (is('臻攝 入聲')) {
         if (is('眞韻 合口')) return is('知莊章組 或 日母') ? 'uaq' : 'yuaq';
-        if (is('眞臻欣韻')) return is('知莊章組 或 日母') ? 'aq' : 'iaq'; //孃母应為iaq TODO
+        if (is('眞臻欣韻')) return is('莊章組 或 日母') ? 'aq' : is('知徹澄母') ? 'aq' : 'iaq';
         if (is('文韻')) return is('幫組') ? 'uaq' : 'yuaq';
         if (is('元韻 開口')) return 'iaq';
         if (is('元韻')) return is('幫組') ? 'uaq' : 'yuaq';
@@ -280,7 +280,7 @@ function 韻母規則(文讀) {
     }
     if (is('曾攝 入聲')) {
         if (is('蒸韻 合口')) return 'yuaq';
-        if (is('蒸韻')) return is('知莊章組 或 日母') ? 'aq' : 'iaq'; //影母字待考 孃母应為iaq TODO
+        if (is('蒸韻')) return is('莊章組 或 日母') ? 'aq' : is('知徹澄母') ? 'aq' : 'iaq'; //影母字待考
         if (is('登韻')) return is('合口') ? 'uaq' : is('幫組') && 文讀 ? 'iaq' : 'aq';
     }
 
