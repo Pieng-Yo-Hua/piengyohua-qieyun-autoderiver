@@ -82,7 +82,8 @@ function 聲母規則(文讀) {
     if (is('溪母')) return 'k';
     if (is('羣母')) return (!文讀) ? 'g' : is('平聲') ? 'k' : 'g';
     if (is('疑母')) {
-        if (is('合口') || is('模韻') || is('通江攝')) return ''
+        if (is('合口') || is('模韻') || is('通江攝')) return '';
+        else if (is('魚虞韻') && 文讀) return '';
         else return 'ng';
     }
 
@@ -136,8 +137,8 @@ function 韻母規則(文讀) {
 
     // 蟹攝
     if (is('齊祭廢韻 合口')) return 'uei'; //齊韻存疑，待考
-    if (is('齊廢韻')) return is(('精組')  && (!文讀)) ? 'ei' : 'i';
-    if (is('祭韻')) return (is(('精組'))  && (!文讀)) ? 'ei' : is('知莊章組') ? 'r' : 'i';
+    if (is('齊廢韻')) return (is('精組')  && (!文讀)) ? 'ei' : 'i';
+    if (is('祭韻')) return (is('精組')  && (!文讀)) ? 'ei' : is('知莊章組') ? 'r' : 'i';
     if (is('泰韻 合口')) return is('精組') ? 'uei' : 'uae';
     if (is('泰韻')) return 'ae';
     if (is('灰韻')) return is('幫組 或 泥母') ? 'ae' : 'uae';
