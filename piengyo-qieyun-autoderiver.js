@@ -301,8 +301,8 @@ function 韻母規則(文讀) {
     if (is('鹽添嚴韻 入聲')) return is('知莊章組 或 日母') ? 'aq' : 'iaq';
     if (is('凡韻 幫組 舒聲')) return 'uon';
     if (is('凡韻 幫組 入聲')) return 'uaq';
-    if (is('咸銜韻 舒聲')) return is('牙喉音') ? 'iang' : 'ang';
-    if (is('咸銜韻 入聲')) return is('牙喉音') ? 'iaq' : 'aq';
+    if (is('咸銜韻 舒聲')) return is('見溪羣曉匣母') ? 'iang' : 'ang';
+    if (is('咸銜韻 入聲')) return is('見溪羣曉匣母') ? 'iaq' : 'aq';
 
     throw new Error('無韻母規則');
 }
