@@ -140,7 +140,7 @@ function 韻母規則(文讀) {
     if (is('祭韻')) return (is(('精組'))  && (!文讀)) ? 'ei' : is('知莊章組') ? 'r' : 'i';
     if (is('泰韻 合口')) return is('精組') ? 'uei' : 'uae';
     if (is('泰韻')) return 'ae';
-    if (is('灰韻')) return is('幫組') ? 'ae' : 'uae';
+    if (is('灰韻')) return is('幫組 或 泥母') ? 'ae' : 'uae';
     if (is('佳韻 合口')) return 'ua';
     if (is('皆韻 合口')) return 'uae';
     if (is('佳皆韻 見組')) return 'ie';
