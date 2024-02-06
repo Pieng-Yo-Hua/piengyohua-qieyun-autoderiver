@@ -232,26 +232,50 @@ function 韻母規則(文讀) {
 
     // 梗攝
     if (is('梗攝 舒聲') && 文讀) {
-        if (is('庚韻 二等 合口')) return 'ueng';
-        if (is('庚耕韻 二等')) return 'eng';
-        if (is('庚韻 三等 合口')) return 'yueng';
-        if (is('庚韻 三等')) return is('幫組 或 牙喉音') ? 'ieng' : 'eng';
-        if (is('清青韻 幫組')) return 'ieng';
-        if (is('耕韻')) return is('合口') ? 'ueng' : 'eng';
-        if (is('青韻')) return is('合口') ? 'yueng' : 'ieng';
-        if (is('清韻')) return is('合口') ? 'yueng' : is('知莊章組') ? 'eng' : 'ieng';
+        if (is('庚韻 二等')) {
+            if (is('合口')) return 'uang';
+            else return is('幫組') ? 'ang' : is('孃疑影曉匣母') ? 'ieng' : 'eng';
+        }
+        if (is('耕韻 二等')) {
+            if (is('合口')) return 'ueng';
+            else return is('孃疑影曉匣母') ? 'ieng' : 'eng';
+        }
+        if (is('庚韻 三等')) {
+            if (is('合口')) return 'yueng';
+            else return is('幫組 或 牙喉音') ? 'ieng' : 'eng';
+        }
+        if (is('清韻')) {
+            if (is('合口')) return 'yueng';
+            else return is('知莊章組') ? 'eng' : 'ieng';
+        }
+        if (is('青韻')) {
+            if (is('合口')) return 'yueng';
+            else return 'ieng';
+        }
     }
-    if (is('梗攝 入聲')) {
-        if (is('庚韻 二等 合口')) return 'uaq';
-        if (is('庚韻 二等')) return is('幫組') ? 'iaq' : is('見組') && !文讀 ? 'iaq' : 'aq';
-        if (is('庚韻 三等 合口')) return 'yuaq';
-        if (is('庚韻 三等')) return is('幫組 或 牙喉音') ? 'iaq' : 'aq';
-        if (is('耕韻')) return is('合口') ? 'uaq' : is('幫組') ? 'iaq' : 'aq';
-        if (is('青韻')) return is('合口') ? 'yuaq' : 'iaq';
-        if (is('清韻')) return is('合口') ? 'iaq' : is('知莊章組') ? 'aq' : 'iaq';
+    if (is('梗攝 入聲') && 文讀) {
+        if (is('庚韻 二等')) {
+            if (is('合口')) return 'uaq';
+            else return is('幫組') ? 'iaq' : 'aq';
+        }
+        if (is('耕韻 二等')) {
+            if (is('合口')) return 'ueng';
+            else return is('幫組') ? 'iaq' : 'aq';
+        }
+        if (is('庚韻 三等')) {
+            if (is('合口')) return 'uaq';
+            else return is('幫組 或 牙喉音') ? 'iaq' : 'aq';
+        }
+        if (is('清韻')) {
+            if (is('合口')) return 'iaq';
+            else return is('知莊章組') ? 'aq' : 'iaq';
+        }
+        if (is('青韻')) {
+            if (is('合口')) return 'yuaq';
+            else return 'iaq';
+        }
     }
-
-
+    
     if (is('梗攝 舒聲') && (!文讀)) {
         if (is('庚韻 二等 幫組')) return 'ia';
         if (is('庚韻 二等 開口 知莊組')) return 'a';
