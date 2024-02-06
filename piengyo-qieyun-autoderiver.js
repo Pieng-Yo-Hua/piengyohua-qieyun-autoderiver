@@ -136,7 +136,8 @@ function 韻母規則(文讀) {
 
     // 蟹攝
     if (is('齊祭廢韻 合口')) return 'uei'; //齊韻存疑，待考
-    if (is('齊祭廢韻')) return is('精組') ? 'ei' : 'i';
+    if (is('齊廢韻')) return is(('精組')  && (!文讀)) ? 'ei' : 'i';
+    if (is('祭韻')) return is(('精組')  && (!文讀)) ? 'ei' : is('知莊章組') ? 'r' : 'i';
     if (is('泰韻 合口')) return is('精組') ? 'uei' : 'uae';
     if (is('泰韻')) return 'ae';
     if (is('灰韻')) return is('幫組') ? 'ae' : 'uae';
@@ -275,7 +276,7 @@ function 韻母規則(文讀) {
             else return 'iaq';
         }
     }
-    
+
     if (is('梗攝 舒聲') && (!文讀)) {
         if (is('庚韻 二等 幫組')) return 'ia';
         if (is('庚韻 二等 開口 知莊組')) return 'a';
