@@ -120,7 +120,7 @@ function 韻母規則(文讀) {
     if (is('之脂支韻 開口')) return is('牙喉音') ? 'i' : 'er';
     if (is('脂支韻 合口 見溪羣疑影曉匣云母 重紐A類')) return 'i';
     if (is('脂支韻 合口 見溪羣疑影曉匣云母 重紐B類')) return 'uei';
-    if (is('脂支韻 合口')) return is('莊組') ? 'uae' : 'uei';
+    if (is('脂支韻 合口')) return is('莊組') ? 'uae' : is('孃母') ? 'ei' : 'uei';
     if (is('微韻 幫組')) return 文讀 ? 'uei' : 'i';
     if (is('微韻 開口')) return 'i';
     if (is('微韻 合口')) return 文讀 ? 'uei' : 'yu';
@@ -158,7 +158,7 @@ function 韻母規則(文讀) {
         if (is('元韻 開口')) return 'ie';
         if (is('元韻')) return is('幫組') ? 'uon' : 'yue';
         if (is('痕韻')) return 'eng';
-        if (is('魂韻')) return is('幫組 或 娘母') ? 'eng' : 'ueng';
+        if (is('魂韻')) return is('幫組 或 泥母') ? 'eng' : 'ueng';
     }
 
     if (is('臻攝 入聲')) {
@@ -168,7 +168,7 @@ function 韻母規則(文讀) {
         if (is('元韻 開口')) return 'iaq';
         if (is('元韻')) return is('幫組') ? 'uaq' : 'yuaq';
         if (is('痕韻')) return 'aq';
-        if (is('魂韻')) return is('幫組') ? 'aq' : 'uaq';
+        if (is('魂韻')) return is('幫組 或 泥母') ? 'aq' : 'uaq';
     }
 
 
