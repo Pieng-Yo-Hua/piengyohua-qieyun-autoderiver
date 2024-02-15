@@ -112,8 +112,8 @@ function 韻母規則(文讀) {
 
     // 江攝
     if (is('江韻 入聲 幫組')) return 'aq';
-    if (is('江韻 入聲') && 文讀) return is('牙喉音') ? 'yuaq' : 'uaq';
-    if (is('江韻 入聲') && !文讀) return is('牙喉音') ? 'yuaq' : 'aq';
+    if (is('江韻 入聲') && 文讀) return is('見溪疑曉匣母') ? 'yuaq' : 'uaq';
+    if (is('江韻 入聲') && !文讀) return is('牙喉音') ? 'yuaq' : 'aq'; //白讀未詳細整理
     if (is('江韻 舒聲 知莊組')) return 文讀 ? 'uon' : 'uo';
     if (is('江韻 舒聲 幫組')) return 文讀 ? 'ang' : 'uo';
     if (is('江韻 舒聲 牙喉音')) return 文讀 ? 'iang' : 'yuo';
