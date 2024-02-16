@@ -50,7 +50,7 @@ function 聲母規則(文讀) {
     if (is('清母')) return 'c';
     if (is('從母')) return is('平聲') && 文讀 ? 'c' : 'z';
     if (is('心母')) return 's';
-    if (is('邪母')) return is('平聲') && 文讀 ? 'c' : 's';
+    if (is('邪母')) return 's';
 
     //莊組文讀
     if (is('莊母') && 文讀) return is('臻攝') ? 'zh' : 'z';
